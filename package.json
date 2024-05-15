@@ -2,7 +2,7 @@
   "name": "vitepress-template",
   "scripts": {
     "dev": "vitepress dev",
-    "build": "vitepress build",
+    "build": "vitepress build --output .vitepress",
     "serve": "vitepress serve"
   },
   "license": "MIT",
