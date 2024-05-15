@@ -25,7 +25,7 @@ interface SidebarItem {
 function fun(root: string) {
     debugger;
     function toList(p: string, prefix = '/docs') {
-        const arr = [] as SidebarItem[];
+        let arr = [] as SidebarItem[];
         const files = fs.readdirSync(p);
         for (const file of files) {
             const tmp = { text: file, link: prefix + '/' + file } as SidebarItem;
@@ -41,6 +41,9 @@ function fun(root: string) {
                 tmp.link = tmp.link.replace('.md', '');
             }
             arr.push(tmp);
+            arr = arr.sort((a, b) => {
+                return parseInt(a.text) - parseInt(b.text);
+            });
         }
         return arr;
     }
