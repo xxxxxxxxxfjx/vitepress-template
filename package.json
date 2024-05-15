@@ -2,8 +2,8 @@
   "name": "vitepress-template",
   "scripts": {
     "dev": "vitepress dev",
-    "build": "vitepress build --output dist",
-    "serve": "vitepress serve"
+    "build": "vitepress build",
+    "preview": "vitepress preview"
   },
   "license": "MIT",
   "dependencies": {
